@@ -15,20 +15,34 @@
   font-size: 1.2rem;
   line-height: 2.5rem;
   align-self: center;
+  margin-top: 1rem;
+}
+
+.row-text {
+  text-align: center;
+  font-size: 1rem;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .row-text:hover {
+  font-size: 1.1rem;
   color: cadetblue;
-}
-
-.hidden {
-  display: none;
 }
 
 hr {
   margin-top: 2rem;
   margin-bottom: 2rem;
   border: 1px lightgray solid;
+  width: 80%;
+}
 
-  width: 100%;
+.icon-container {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  padding: 0 0.3rem;
 }
