@@ -55,6 +55,7 @@ body {
   background: transparent;
   border: transparent;
   transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-tap-highlight-color: transparent;
 }
 .header-button.active {
   transform: rotate(45deg);

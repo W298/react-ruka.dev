@@ -78,9 +78,9 @@ function Header({ setViewHidden }) {
     <div className={header.styCls}>
       <div className="header-upper-container">
         <div className="header-title">ruka.dev</div>
-        <button className="header-button" onClick={toggleHeaderOpen}>
+        <div className="header-button" onClick={toggleHeaderOpen}>
           +
-        </button>
+        </div>
       </div>
       <div className={"header-menu-container " + menuCls}>
         {menuList.map((menu) => {
