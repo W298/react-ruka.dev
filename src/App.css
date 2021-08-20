@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  font-family: 'Cascadia Code';
+}
+
+.header {
+  position: fixed;
+  width: calc(100% - 0.7rem);
+  background-color: cadetblue;
+  padding: 0.7rem;
+  height: 3rem;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.header-open {
+  height: 10rem;
+}
+
+.header-upper-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.header-title {
+  font-size: 1.7rem;
+  padding: 0.5rem;
+  color: white;
+  flex: 1;
+}
+
+.header-menu-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+.header-menu-container > div {
+  padding: 0.4rem;
+  color: rgb(78, 128, 129);
+}
+.header-menu-container > div:hover {
+  background-color: rgb(113, 176, 177);
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.header-button {
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background: transparent;
+  border: transparent;
+}
+.header-button:active {
+  background-color: rgb(78, 128, 129);
+}

@@ -1,0 +1,34 @@
+.MainBody {
+  height: 90vh;
+  padding: 1rem;
+  padding-top: 5.5rem;
+}
+
+.container {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-title {
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  align-self: center;
+}
+
+.row-text:hover {
+  color: cadetblue;
+}
+
+.hidden {
+  display: none;
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 1px lightgray solid;
+
+  width: 100%;
+}
