@@ -18,6 +18,22 @@
   margin-top: 1rem;
 }
 
+.sub-title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.card {
+  padding: 1rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 .row-text {
   text-align: center;
   font-size: 1rem;
@@ -25,8 +41,7 @@
 }
 
 .row-text:hover {
-  font-size: 1.1rem;
-  color: cadetblue;
+  color: #c850c0;
 }
 
 hr {
@@ -42,7 +57,7 @@ hr {
 }
 
 .icon {
-  width: 2rem;
-  height: 2rem;
-  padding: 0 0.3rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  padding: 0 0.5rem;
 }

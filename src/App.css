@@ -8,7 +8,13 @@ body {
 .header {
   position: fixed;
   width: calc(100% - 0.7rem);
-  background-color: cadetblue;
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
   padding: 0.7rem;
   height: 2.5rem;
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -37,11 +43,11 @@ body {
 .header-menu-container > div {
   padding: 0.4rem;
   width: calc(100% - 1.6rem);
-  color: rgb(78, 128, 129);
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .header-menu-container > div:hover {
-  background-color: rgb(113, 176, 177);
-  color: white;
+  color: rgba(255, 255, 255, 1);
 }
 
 .hidden {

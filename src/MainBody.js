@@ -12,20 +12,54 @@ function MainBody({ homeHidden, projectsHidden }) {
 }
 
 function Home() {
+  const maintextList = [
+    ["👋 Hi, I'm ruka,", "Game Developer & Web Developer"],
+    ["I mainly develop GAME,", "but I'm studying WEB either."]
+  ];
+
   return (
     <div className="container">
-      <div className="main-title">
-        <div className="row-text">👋 Hi, I'm ruka,</div>
-        <div className="row-text">Game Developer & Web Developer</div>
-      </div>
-      <div className="main-title">
-        <div className="row-text">I mainly develop GAME,</div>
-        <div className="row-text">but I'm studying WEB either.</div>
-      </div>
+      {maintextList.map((textList) => {
+        return <MainText textCls="main-title" textList={textList} />;
+      })}
       <hr />
+      <div className="card-container">
+        <CardShelf
+          title="WEB DEV"
+          iconNameList={["react", "vuejs", "bootstrap"]}
+        />
+        <CardShelf title="GAME DEV" iconNameList={["unity", "unreal"]} />
+      </div>
+      <div className="card-container">
+        <CardShelf
+          title="MAIN LANGUAGES"
+          iconNameList={["cpp", "javascript", "typescript"]}
+        />
+      </div>
+    </div>
+  );
+}
+
+function MainText({ textCls, textList }) {
+  return (
+    <div className={textCls}>
+      {textList.map((text) => {
+        return <div className="row-text">{text}</div>;
+      })}
+    </div>
+  );
+}
+
+function CardShelf({ title, iconNameList }) {
+  return (
+    <div className="card">
+      <div className="sub-title">
+        <div className="row-text">{title}</div>
+      </div>
       <div className="icon-container">
-        <Icon iconName="react" fillColor="#61DAFB" />
-        <Icon iconName="vuejs" fillColor="#4FC08D" />
+        {iconNameList.map((iconName) => {
+          return <Icon iconName={iconName} />;
+        })}
       </div>
     </div>
   );
@@ -44,7 +78,7 @@ function Icon({ iconName, fillColor }) {
           ? iconPath[iconName].viewbox
           : "0 0 24 24"
       }
-      fill={fillColor}
+      fill={fillColor ? fillColor : iconPath[iconName].fillColor}
       className="icon"
     >
       <path d={iconPath[iconName].path} />
