@@ -1,0 +1,57 @@
+.container {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-title {
+  font-size: 1.1rem;
+  line-height: 2.5rem;
+  align-self: center;
+  margin-top: 1rem;
+}
+
+.sub-title {
+  font-size: 0.85rem;
+  line-height: 1.5rem;
+  align-self: center;
+  margin-top: 2rem;
+}
+
+.icon-title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.card {
+  padding: 1rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.row-text {
+  text-align: center;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.row-text:hover {
+  color: #c850c0;
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 1px lightgray solid;
+  width: 80%;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+}

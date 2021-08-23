@@ -19,7 +19,8 @@ body {
   height: 2.5rem;
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.header-open {
+
+.header.opened {
   height: 10rem;
 }
 
@@ -49,8 +50,7 @@ body {
 .header-menu-container > div:hover {
   color: rgba(255, 255, 255, 1);
 }
-
-.hidden {
+.header-menu-container.hidden > div {
   display: none;
 }
 

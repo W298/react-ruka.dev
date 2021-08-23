@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./App.css";
-import "./MainBody.js";
 import MainBody from "./MainBody.js";
 
 function App() {
@@ -21,12 +20,6 @@ function App() {
 }
 
 function Header({ setViewHidden }) {
-  const [header, setHeader] = useState({
-    opened: false,
-    styCls: "header"
-  });
-  const [menuCls, setMenuCls] = useState("hidden");
-
   const menuList = [
     {
       id: 1,
@@ -55,34 +48,20 @@ function Header({ setViewHidden }) {
   ];
 
   function toggleHeaderOpen() {
-    if (header.opened) {
-      setHeader({
-        opened: false,
-        styCls: "header"
-      });
-      setMenuCls("hidden");
-    } else {
-      setHeader({
-        opened: true,
-        styCls: "header header-open"
-      });
-      setTimeout(() => {
-        setMenuCls("");
-      }, 120);
-    }
-
+    document.querySelector(".header-menu-container").classList.toggle("hidden");
+    document.querySelector(".header").classList.toggle("opened");
     document.querySelector(".header-button").classList.toggle("active");
   }
 
   return (
-    <div className={header.styCls}>
+    <div className="header">
       <div className="header-upper-container">
         <div className="header-title">ruka.dev</div>
         <div className="header-button" onClick={toggleHeaderOpen}>
           +
         </div>
       </div>
-      <div className={"header-menu-container " + menuCls}>
+      <div className="header-menu-container hidden">
         {menuList.map((menu) => {
           return (
             <div
@@ -90,8 +69,7 @@ function Header({ setViewHidden }) {
               onClick={() => {
                 setViewHidden({ ...menu.viewHidden });
                 toggleHeaderOpen();
-              }}
-            >
+              }}>
               {menu.title}
             </div>
           );
