@@ -4,8 +4,8 @@ import MainBody from "./MainBody.js";
 
 function App() {
   const [viewHidden, setViewHidden] = useState({
-    home: false,
-    projects: true
+    home: true,
+    projects: false
   });
 
   return (
@@ -20,6 +20,8 @@ function App() {
 }
 
 function Header({ setViewHidden }) {
+  const [headerOpened, setHeaderOpened] = useState(false);
+
   const menuList = [
     {
       id: 1,
@@ -48,20 +50,18 @@ function Header({ setViewHidden }) {
   ];
 
   function toggleHeaderOpen() {
-    document.querySelector(".header-menu-container").classList.toggle("hidden");
-    document.querySelector(".header").classList.toggle("opened");
-    document.querySelector(".header-button").classList.toggle("active");
+    setHeaderOpened(!headerOpened);
   }
 
   return (
-    <div className="header">
+    <div className={"header" + (headerOpened ? " opened" : "")}>
       <div className="header-upper-container">
         <div className="header-title">ruka.dev</div>
-        <div className="header-button" onClick={toggleHeaderOpen}>
+        <div className={"header-button" + (headerOpened ? " active" : "")} onClick={toggleHeaderOpen}>
           +
         </div>
       </div>
-      <div className="header-menu-container hidden">
+      <div className={"header-menu-container" + (headerOpened ? "" : " hidden")}>
         {menuList.map((menu) => {
           return (
             <div

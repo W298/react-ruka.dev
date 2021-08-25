@@ -1,0 +1,39 @@
+.proj-page-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.proj-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.proj-card {
+  background-color: lightgray;
+  margin: 1rem;
+  width: calc(7rem + 10vw);
+  height: calc(7rem + 10vw);
+}
+
+.proj-card-title {
+  z-index: 0;
+  position: relative;
+  font-weight: bold;
+  font-size: 1.1rem;
+  width: calc(6rem + 10vw);
+  word-wrap: break-word;
+  padding: 0.5rem;
+}
+
+.proj-card-subtitle {
+  font-size: 80%;
+  padding: 0 0.5rem;
+}
+
+.proj-card-img {
+  width: inherit;
+  height: inherit;
+  border: none; outline: none;
+}
