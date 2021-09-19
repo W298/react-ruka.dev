@@ -4,8 +4,8 @@ import MainBody from "./MainBody.js";
 
 function App() {
   const [viewHidden, setViewHidden] = useState({
-    home: true,
-    projects: false
+    home: false,
+    projects: true
   });
 
   return (
