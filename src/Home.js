@@ -1,14 +1,16 @@
 import React from "react";
 import "./Home.css";
+import "./Home.scss";
 import Icon from "./Icon.js";
 
 function Home() {
   const textList = {
-    "main-title": [
-      ["👋 Hi, I'm ruka,", "Game Developer & Web Developer"]
-    ],
+    "main-title": [["👋 Hi, I'm ruka,", "Game Developer & Web Developer"]],
     "sub-title": [
-      ["This website is built with `react.js`,", "which I'm currently learning."]
+      [
+        "This website is built with `react.js`,",
+        "which I'm currently learning."
+      ]
     ]
   };
 
@@ -16,21 +18,21 @@ function Home() {
     "WEB DEV": ["react", "vuejs", "bootstrap"],
     "GAME DEV": ["unity", "unreal"],
     "MAIN LANGUAGES": ["cpp", "javascript", "typescript"]
-  }
+  };
 
   return (
     <div className="container">
-      <div className="inner-container gradient-border shadow">
+      <div className="inner-container gradient-border appear-anim">
         {Object.keys(textList).map((key) => {
           return textList[key].map((text) => {
-            return <Text textCls={key} textList={text} />
+            return <Text textCls={key} textList={text} />;
           });
         })}
       </div>
-      <div className="inner-container shadow">
+      <div className="inner-container appear-anim">
         <div className="card-container">
           {Object.keys(cardShelfList).map((key) => {
-            return <CardShelf title={key} iconNameList={cardShelfList[key]} />
+            return <CardShelf title={key} iconNameList={cardShelfList[key]} />;
           })}
         </div>
       </div>

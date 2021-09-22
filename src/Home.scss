@@ -1,0 +1,5 @@
+@for $i from 1 through 10 {
+  .container .inner-container:nth-child(#{$i}n) {
+      animation-delay: #{$i * 0.1}s;
+  }
+}
