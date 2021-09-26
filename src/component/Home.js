@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 import "./Home.scss";
-import Icon from "./Icon.js";
+import Icon from "../module/Icon.js";
 
 function Home() {
   const textList = {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import MainBody from "./MainBody.js";
+import MainBody from "./component/MainBody.js";
 
 function App() {
   const [viewHidden, setViewHidden] = useState({
@@ -57,11 +57,16 @@ function Header({ setViewHidden }) {
     <div className={"header" + (headerOpened ? " opened" : "")}>
       <div className="header-upper-container">
         <div className="header-title">ruka.dev</div>
-        <div className={"header-button" + (headerOpened ? " active" : "")} onClick={toggleHeaderOpen}>
+        <div
+          className={"header-button" + (headerOpened ? " active" : "")}
+          onClick={toggleHeaderOpen}
+        >
           +
         </div>
       </div>
-      <div className={"header-menu-container" + (headerOpened ? "" : " hidden")}>
+      <div
+        className={"header-menu-container" + (headerOpened ? "" : " hidden")}
+      >
         {menuList.map((menu) => {
           return (
             <div
@@ -69,7 +74,8 @@ function Header({ setViewHidden }) {
               onClick={() => {
                 setViewHidden({ ...menu.viewHidden });
                 toggleHeaderOpen();
-              }}>
+              }}
+            >
               {menu.title}
             </div>
           );
