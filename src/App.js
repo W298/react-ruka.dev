@@ -12,10 +12,7 @@ function App() {
   return (
     <div className="App">
       <Header setViewHidden={setViewHidden} />
-      <MainBody
-        homeHidden={viewHidden.home}
-        projectsHidden={viewHidden.projects}
-      />
+      <MainBody viewHidden={viewHidden} />
     </div>
   );
 }

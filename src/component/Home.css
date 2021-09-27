@@ -1,5 +1,5 @@
 .container {
-  padding-top: 1rem;
+  padding-top: 0rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -12,7 +12,7 @@
   flex-direction: column;
   justify-content: center;
   margin: 1rem;
-  padding: 2rem 2.5rem 2rem 2.5rem;
+  padding: 2rem;
   border-radius: 1rem;
 }
 
@@ -34,18 +34,17 @@
 }
 
 .main-title {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 2.5rem;
   align-self: center;
-  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .sub-title {
   font-size: 0.85rem;
   line-height: 1.5rem;
   align-self: center;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .icon-title {

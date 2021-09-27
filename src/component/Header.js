@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./Header.css";
 
 function Header({ setViewHidden }) {
 	const [headerOpened, setHeaderOpened] = useState(false);
+	const [headerMenuShown, setHeaderMenuShown] = useState(false);
+	
+	const headerMenuCont = useRef();
 
 	const menuList = [
 		{
@@ -30,9 +33,22 @@ function Header({ setViewHidden }) {
 			}
 		}
 	];
-
+	
 	function toggleHeaderOpen() {
-		setHeaderOpened(!headerOpened);
+		if (headerOpened || headerMenuShown) {
+			setHeaderMenuShown((prevVal) => !prevVal);
+			setTimeout(() => {
+				setHeaderOpened((prevVal) => !prevVal);
+				headerMenuCont.current.style = "display: none";
+			}, 200)
+		}
+		else {
+			setHeaderOpened((prevVal) => !prevVal);
+			headerMenuCont.current.style = "display: block";
+			setTimeout(() => {
+				setHeaderMenuShown((prevVal) => !prevVal);
+			}, 200);
+		}
 	}
 
 	return (
@@ -47,7 +63,8 @@ function Header({ setViewHidden }) {
         </div>
 			</div>
 			<div
-				className={"header-menu-container" + (headerOpened ? "" : " hidden")}
+				className={"header-menu-container" + (headerMenuShown ? "" : " hidden")}
+				ref={headerMenuCont}
 			>
 				{menuList.map((menu) => {
 					return (

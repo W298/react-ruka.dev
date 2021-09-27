@@ -39,13 +39,13 @@
   padding: 0.4rem;
   width: calc(100% - 1.6rem);
   color: rgba(255, 255, 255, 0.5);
-  transition: all 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .header-menu-container > div:hover {
   color: rgba(255, 255, 255, 1);
 }
 .header-menu-container.hidden > div {
-  display: none;
+	color: rgba(255, 255, 255, 0);
 }
 
 .header-button {

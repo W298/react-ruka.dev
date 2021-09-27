@@ -3,11 +3,11 @@ import "./MainBody.css";
 import Projects from "./Projects.js";
 import Home from "./Home.js";
 
-function MainBody({ homeHidden, projectsHidden }) {
+function MainBody({ viewHidden }) {
   return (
     <div className="MainBody">
-      {homeHidden ? null : <Home />}
-      {projectsHidden ? null : <Projects />}
+      {!viewHidden.home && <Home />}
+      {!viewHidden.projects && <Projects />}
     </div>
   );
 }
