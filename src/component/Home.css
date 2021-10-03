@@ -1,10 +1,32 @@
 .container {
   padding-top: 0rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: minmax(1fr, auto);
+  grid-gap: 0.5rem;
+  place-content: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  /* sidebar */
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  /* sidebar */
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.5rem;
+  }
 }
 
 .inner-container {

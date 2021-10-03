@@ -5,13 +5,8 @@ import Icon from '../module/Icon.js';
 
 function Home() {
 	const textList = {
-		'main-title': [["👋 Hi, I'm ruka,", 'Game Developer & Web Developer']],
-		'sub-title': [
-			[
-				'This website is built with `react.js`,',
-				"which I'm currently learning."
-			]
-		]
+		'main-title': [["👋 Hi, I'm ruka,", 'Game & Web Developer']],
+		'sub-title': [['This website is built with,', '`React + Node.js`']]
 	};
 
 	const cardShelfList = {
