@@ -1,22 +1,22 @@
-@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap");
+@import url('https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap');
 
 body {
-  margin: 0;
-  font-family: "IBM Plex Sans KR";
-  background-color: rgb(246, 246, 246);
-  font-weight: 500;
+	margin: 0;
+	font-family: 'IBM Plex Sans KR';
+	background-color: rgb(246, 246, 246);
+	font-weight: 500;
 }
 
 i {
-  font-size: 1.5rem;
-  padding: 0 0.5rem;
+	font-size: 1.5rem;
+	padding: 0 0.5rem;
 }
 
 hr {
-  margin-top: 0rem !important;
-  margin-bottom: 0rem !important;
-  width: 80%;
-  border-color: white;
+	margin-top: 0rem !important;
+	margin-bottom: 0rem !important;
+	width: 80%;
+	border-color: white;
 }
