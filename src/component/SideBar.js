@@ -11,7 +11,7 @@ function SideBarMenu({ iconCls, text }) {
 
 function SideBarFooterIcons({ iconCls, url }) {
   return (
-    <a href={url} target="_blank">
+    <a href={url} target="_blank" rel="noreferrer">
       <i className={"bi " + iconCls}></i>
     </a>
   );
