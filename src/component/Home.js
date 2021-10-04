@@ -5,14 +5,21 @@ import Icon from '../module/Icon.js';
 
 function Home() {
 	const textList = {
-		'main-title': [["👋 Hi, I'm ruka,", 'Game & Web Developer']],
-		'sub-title': [['This website is built with,', '`React + Node.js`']]
+		'main-title': [["👋 Hi, I'm ruka."]],
+		'sub-title': [
+			['저는 게임, 웹 개발을 주로 하고 있어요.'],
+			[
+				'게임은 주로 시뮬레이션 게임,',
+				'웹은 리액트를 이용한 웹앱 개발을 하고 있어요.'
+			],
+			['참고로 이 블로그는 리액트와 Node.js 로 제작했어요.']
+		]
 	};
 
 	const cardShelfList = {
-		'WEB DEV': ['react', 'vuejs', 'bootstrap'],
-		'GAME DEV': ['unity', 'unreal'],
-		'MAIN LANGUAGES': ['cpp', 'javascript', 'typescript']
+		'웹 개발': ['react', 'vuejs', 'bootstrap'],
+		'게임 개발': ['unity', 'unreal'],
+		'주 언어': ['cpp', 'javascript', 'typescript']
 	};
 
 	return (
@@ -25,6 +32,9 @@ function Home() {
 				})}
 			</div>
 			<div className="inner-container appear-anim">
+				<div className="inner-container-header">
+					주로 사용하는 Framework & Library
+				</div>
 				<div className="card-container">
 					{Object.keys(cardShelfList).map((key) => {
 						return (
